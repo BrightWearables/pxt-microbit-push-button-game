@@ -10,7 +10,7 @@ Let's make a push button game
 
 In the ``||variables:Variables||`` menu click "Make a Variable".
 When asked, name it ``||variables:pushed||`` 
-Drag the new ``||bariables:set pushed to 0||`` block into ``||basic:on start||``, then change the value of pushed to 1 as shown below:
+Drag the new ``||variables:set pushed to 0||`` block into ``||basic:on start||``, then change the value of ``||variables:pushed||`` to 1.
 
 ![create a variable](https://raw.githubusercontent.com/BrightWearables/pxt-microbit-push-button-game/master/docs/static/makeVariableMakeCode.gif)
 
@@ -21,13 +21,14 @@ pushed = 1
 ## Step 2: Start the game when you shake the micro:bit
 
 Add the ``||input:on shake||`` code block to the editor.
-Use the ``||basic:show string||`` to say "wait" when you shake the micro:bit. This means the game is starting..
+Add the ``||basic:show string||`` block inside the ``||input:on shake||``block and set it
+to say "wait" when you shake the micro:bit. This tells players the game is starting
 
 ```blocks
 input.onGesture(Gesture.Shake, function () {
     basic.showString("wait")
 })
-pushed=0
+pushed=1
 ```
 ## Step 3: Add a random wait time
 
