@@ -17,8 +17,9 @@ pushed = 1
 
 ## Step 2: Start the game when you shake the micro:bit
 
-Add the ``[input.onGesture(Gesture.Shake, function () {})]`` code block to the editor.
-Use the ``[basic.showString("")]`` block to display the word "wait" when you shake the micro:bit. This lets the players know the game is starting..
+Add the ``||input:onShake||`` code block to the editor.
+Use the ``||basic:showString("")||`` to say "wait" when you shake the micro:bit. This means the game is starting..
+
 ```blocks
 input.onGesture(Gesture.Shake, function () {
     basic.showString("wait")
@@ -27,8 +28,8 @@ pushed=0
 ```
 ## Step 3: Add a random wait time
 
-Add a ``[basic.pause()]`` block inside the ``[input.onGesture(Gesture.Shake, function () {})]`` block. Don't set a number for the "pause" value. 
-Instead take the ``[Math.randomRange(0, 10)]`` block from the ``||Math||`` menu and place it inside the ``[basic.pause()]`` block. Change
+Add a ``||basic:pause||`` block inside the ``||onShake||`` block. Don't set the time for the pause. 
+Instead take the ``||math:random from 0 to 10||`` block from the ``||Math||`` menu and place it inside the ``||basic.pause||`` block. Change
 the minimum and maximum wait times to 1000 and 5000 milliseconds:
 ```blocks
 input.onGesture(Gesture.Shake, function () {
