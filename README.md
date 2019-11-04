@@ -6,7 +6,7 @@ pushed = 1
 
 Let's make a push button game
 
-![picture of microbit](https://github.com/BrightWearables/pxt-microbit-push-button-game/docs/static/PushButtonMicrobitImage.png?raw=true)
+![picture of microbit](https://raw.githubusercontent.com/BrightWearables/pxt-microbit-push-button-game/master/docs/static/PushButtonMicrobitImage.png)
 
 ## Step 1: Create a variable named "pushed"
 
