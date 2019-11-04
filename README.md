@@ -1,10 +1,11 @@
+# Push button game
+
 ```template
 input.onGesture(Gesture.Shake, function () {
     basic.showString("wait")
 })
 pushed=1
 ```
-# Push button game
 
 ## Introduction @unplugged
 
