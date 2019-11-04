@@ -30,7 +30,7 @@ pushed=0
 ```
 ## Step 3: Add a random wait time
 
-Add a ``||basic:pause||`` block inside the ``||onShake||`` block. Don't set the time for the pause. 
+Add a ``||basic:pause||`` block inside the ``||input:onShake||`` block. Don't set the time for the pause. 
 Instead take the ``||math:random from 0 to 10||`` block from the ``||Math||`` menu and place it inside the ``||basic.pause||`` block. Change
 the minimum and maximum wait times to 1000 and 5000 milliseconds:
 ```blocks
