@@ -92,7 +92,7 @@ let pushed = 0
 pushed = 1
 ```
 
-## Step 6: See if we're the first to push the button
+## Step 6: Check if player A pushed first
 
 We'll use the ``||logic:if||`` block to check if we're the first person to push the button. 
 Get the first comparison block from the ``||logic:Logic||`` menu, and add it inside the ``||logic:if||`` block.
@@ -102,7 +102,7 @@ and place it inside the comparison block.
 
 If the value of ``||variables:pushed||``
 is 0, and we'll block the other player out by setting ``||variables:pushed||`` to 1. 
-We'll also write the name of our button to the screen so we can see who won using the ``||basic:show string||`` block:
+We'll also write the letter "A" to the screen to show who won (check hint if you're not sure how)
   
 ```blocks
 input.onButtonPressed(Button.A, function () {
