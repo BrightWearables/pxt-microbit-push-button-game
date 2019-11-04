@@ -2,6 +2,8 @@
 
 ## Introduction @unplugged
 Let's build and add on to last week's push button game
+![fingers pushing](/static/PushButtonMicrobitImage.png)
+
 
 ## Step 1: Create a variable named "pushed"
 
