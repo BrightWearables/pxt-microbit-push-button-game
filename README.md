@@ -4,7 +4,6 @@
 input.onGesture(Gesture.Shake, function () {
     basic.showString("wait")
 })
-pushed=1
 ```
 
 ## Introduction @unplugged
