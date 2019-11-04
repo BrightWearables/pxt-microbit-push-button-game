@@ -1,8 +1,7 @@
+# Push button game
 ```template
 pushed = 1
 ```
-# Push button game
-
 ## Introduction @unplugged
 Let's make a push button game
 
