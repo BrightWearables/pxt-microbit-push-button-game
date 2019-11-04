@@ -1,7 +1,5 @@
 # Push button game
-```template
-pushed = 1
-```
+
 ## Introduction @fullscreen
 
 Let's make a push button game
