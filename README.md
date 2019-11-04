@@ -1,7 +1,9 @@
 # Push button game
-
+```template
+pushed = 1
+```
 ## Introduction @unplugged
-Let's build and add on to last week's push button game
+Let's make a push button game
 
 ## Step 1: Create a variable named "pushed"
 
@@ -10,15 +12,14 @@ When asked, name it ``||Variables:pushed||``
 
 
 Drag the new ``||Variables:set pushed to 0||`` block into ``||Basic:on start||``, then change the value of pushed to 1 as shown below:
-
 ```blocks
 pushed = 1
 ```
 
 ## Step 2: Start the game when you shake the micro:bit
 
-Add the ``||input:onShake||`` code block to the editor.
-Use the ``||basic:showString("")||`` to say "wait" when you shake the micro:bit. This means the game is starting..
+Add the ``||input:on shake||`` code block to the editor.
+Use the ``||basic:show string||`` to say "wait" when you shake the micro:bit. This means the game is starting..
 
 ```blocks
 input.onGesture(Gesture.Shake, function () {
@@ -41,7 +42,7 @@ pushed=0
 ## Step 4: Enable button pushing
 
 Once the wait is over, set the value of ``||Variables:pushed||`` to 0. We'll use this value to let the players push buttons A and B.
-Add a ``[basic.showIcon(IconNames.Yes)]`` block to let the players know it's ok to push the buttons:
+Add a ``||basic:show icon||`` block to let the players know it's ok to push the buttons:
 
 ```blocks
 input.onGesture(Gesture.Shake, function () {
@@ -54,8 +55,8 @@ let pushed = 0
 pushed = 1
 ```
 ## Step 5: Code a response to button pushing
-Move a ``[input.onButtonPressed(Button.A, function () {}]`` code block into the code editor.
-Place the ``[if(0==0){}]`` block inside it:
+Move an ``||input:on button pressed||`` code block into the editor window.
+Place the ``||logic:if||`` block inside it:
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
@@ -85,7 +86,7 @@ Get the comparison block from the ``||logic||`` menu, and add it inside the "if"
 from the ``||variables||`` menu, and place it in the comparison block to check if the value is zero.
 If the value of ``||variables:pushed||``
 is 0, and we'll block the other player out by setting ``||variables:pushed||`` to 1. 
-We'll also write the name of our button to the screen so we can see who won using the ``basic:||show string||`` block:
+We'll also write the name of our button to the screen so we can see who won using the ``||basic:show string||`` block:
   
 ```blocks
 input.onButtonPressed(Button.A, function () {
