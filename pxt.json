@@ -1,10 +1,10 @@
 {
-    "name": "testTutorial",
+    "name": "Push button game",
     "dependencies": {
         "core": "*",
         "radio": "*"
     },
-    "description": "",
+    "description": "a game of reaction time",
     "files": [
         "main.blocks",
         "main.ts",

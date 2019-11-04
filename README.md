@@ -1,4 +1,4 @@
-# Improved Push Button Game
+# Push button game
 
 ## Introduction @unplugged
 Let's build and add on to last week's push button game
