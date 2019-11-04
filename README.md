@@ -1,3 +1,9 @@
+```template
+input.onGesture(Gesture.Shake, function () {
+    basic.showString("wait")
+})
+pushed=1
+```
 # Push button game
 
 ## Introduction @unplugged
@@ -12,10 +18,9 @@ In the ``||variables:Variables||`` menu click "Make a Variable".
 When asked, name it ``||variables:pushed||`` 
 Drag the new ``||variables:set pushed to 0||`` block into ``||basic:on start||``, then change the value of ``||variables:pushed||`` to 1.
 
-Do this:
 ![create a variable](https://raw.githubusercontent.com/BrightWearables/pxt-microbit-push-button-game/master/docs/static/makeVariableMakeCodeSmaller.gif)
 
-To end up with this code:
+You should end up with this code:
 ```blocks
 pushed = 1
 ```
