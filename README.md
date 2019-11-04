@@ -2,16 +2,14 @@
 
 ## Introduction @unplugged
 Let's build and add on to last week's push button game
-![fingers pushing](/static/PushButtonMicrobitImage.png)
-
 
 ## Step 1: Create a variable named "pushed"
 
 In the ``||Variables||`` menu click "Make a Variable".
-When asked, name it ``||variables:pushed||`` 
+When asked, name it ``||Variables:pushed||`` 
 
 
-Drag the new ``||variables:set pushed=0||`` block into ``||Basic:on start||``, then change the value of pushed to 1 as shown below:
+Drag the new ``||Variables:set pushed to 0||`` block into ``||Basic:on start||``, then change the value of pushed to 1 as shown below:
 
 ```blocks
 pushed = 1
