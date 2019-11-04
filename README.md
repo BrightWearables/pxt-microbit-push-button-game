@@ -9,7 +9,7 @@ In the ``||Variables||`` menu click "Make a Variable".
 When asked, name it ``||variables:pushed||`` 
 
 
-Drag the new ``[pushed=0]`` block into ``||Basic:on start||``, then change the value of pushed to 1 as shown below:
+Drag the new ``||variables:set pushed=0||`` block into ``||Basic:on start||``, then change the value of pushed to 1 as shown below:
 
 ```blocks
 pushed = 1
