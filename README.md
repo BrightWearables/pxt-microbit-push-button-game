@@ -15,6 +15,7 @@ Drag the new ``||variables:set pushed to 0||`` block into ``||basic:on start||``
 ![create a variable](https://raw.githubusercontent.com/BrightWearables/pxt-microbit-push-button-game/master/docs/static/makeVariableMakeCode.gif)
 
 ```blocks
+let pushed = 0
 pushed = 1
 ```
 
@@ -28,12 +29,13 @@ to say "wait" when you shake the micro:bit. This tells players the game is start
 input.onGesture(Gesture.Shake, function () {
     basic.showString("wait")
 })
+let pushed = 0
 pushed=1
 ```
 ## Step 3: Add a random wait time
 
 Add a ``||basic:pause||`` block inside the ``||input:onShake||`` block.
-Then take the ``||math:random from 0 to 10||`` block from the ``||Math||`` menu 
+Then take the ``||math:random from 0 to 10||`` block from the ``||math:Math||`` menu 
 and place it inside the ``||basic:pause||`` block. 
 Change the minimum and maximum wait times to 1000 and 5000 milliseconds:
 
@@ -42,6 +44,7 @@ input.onGesture(Gesture.Shake, function () {
     basic.showString("wait")
     basic.pause(Math.randomRange(1000, 5000))
 })
+let pushed = 0
 pushed=1
 ```
 ## Step 4: Enable button pushing
@@ -58,6 +61,7 @@ input.onGesture(Gesture.Shake, function () {
     pushed = 0
     basic.showIcon(IconNames.Yes)
 })
+let pushed = 0
 pushed = 1
 ```
 ## Step 5: Check putton pushes
@@ -77,22 +81,23 @@ input.onGesture(Gesture.Shake, function () {
     pushed = 0
     basic.showIcon(IconNames.Yes)
 })
+let pushed = 0
 pushed = 1
 ```
 
 ## Step 6: Check if player A pushed first
 
-In the ``||logic:if||`` block we'll check if we pushed first.
+Inside the ``||logic:if||`` block we'll check if we were first.
 Get the first comparison block from the ``||logic:Logic||`` menu, and place it inside the ``||logic:if||`` block. 
 Then check if the value of ``||variables:pushed||`` is zero by taking it from the ``||variables:Variables||`` menu, 
 and place it inside the comparison block.
 
 ![compare a variable](https://raw.githubusercontent.com/BrightWearables/pxt-microbit-push-button-game/master/docs/static/compareVariable.gif)
 
-## Step 7: Block the other player
+## Step 7: Lock out the other player
 
 If the value of ``||variables:pushed||``
-is 0, we'll block the other player out by setting ``||variables:pushed||`` to 1. 
+is 0, we'll lock the other player out by setting ``||variables:pushed||`` to 1. 
 We'll also write the letter "A" to the screen to show who won (check the hint if you're not sure how)
   
 ```blocks
