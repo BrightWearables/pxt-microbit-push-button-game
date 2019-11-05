@@ -1,4 +1,17 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <variables></variables>
-  <block type="device_forever" x="20" y="20"></block>
+  <variables>
+    <variable type="" id="dJ.S:,u:ti7b:DG3XiDr">pushed</variable>
+  </variables>
+  <block type="device_forever" x="0" y="0">
+    <statement name="HANDLER">
+      <block type="variables_change">
+        <field name="VAR" id="dJ.S:,u:ti7b:DG3XiDr" variabletype="">pushed</field>
+        <value name="VALUE">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
 </xml>

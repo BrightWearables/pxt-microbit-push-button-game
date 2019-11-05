@@ -148,5 +148,96 @@ pushed = 1
 ```
 ## Step 8: Download and test your code
 
-Pair your micro:bit. Download your code. Play the game against a friend and 
-test your reaction time. When you're sure it's working, do the next tutorial.
+Take a momemt to download and test your code. Play the game against a friend and 
+test your reaction time. When you're sure it's working right, move on
+to the next step to add a scorekeeping function.
+
+## Step 9: Create variables to keep score
+
+Create two new variables called ``||variables:scoreA||`` and 
+``||variables:scoreB||`` in the ``||variables:Variables||`` menu.
+Set their values to zero in the ``||basic:On Start||`` block.
+
+```blocks
+let scoreA = 0
+let scoreB = 0
+let pushed = 0
+pushed = 1
+```
+## Step 10: Change the score when a player wins
+
+Can you figure out how to keep track of each players score? 
+After each game, you'll
+need to add 1 to the winner's score. See if you
+can figure out how to do that. 
+Check the hint if you're not sure:
+
+```blocks
+input.onButtonPressed(Button.A, function () {
+    if (pushed == 0) {
+        pushed = 1
+        basic.showString("A")
+        scoreA += 1
+    }
+})
+input.onButtonPressed(Button.B, function () {
+    if (pushed == 0) {
+        pushed = 1
+        basic.showString("B")
+        scoreB += 1
+    }
+})
+input.onGesture(Gesture.Shake, function () {
+    basic.showString("wait")
+    basic.pause(Math.randomRange(1000, 5000))
+    pushed = 0
+    basic.showIcon(IconNames.Yes)
+})
+let scoreA = 0
+let scoreB = 0
+let pushed = 0
+pushed = 1
+```
+
+## Display the score after each win
+
+After a player wins, we will wait a few seconds so the players
+can see who won, then use the ``||basic:showString||`` and ``||basic:showNumber||``
+code blocks to display the score. 
+
+```blocks
+input.onButtonPressed(Button.A, function () {
+    if (pushed == 0) {
+        pushed = 1
+        basic.showString("A")
+        scoreA += 1
+        basic.showString("A:")
+        basic.showNumber(scoreA)
+        basic.showString("B:")
+        basic.showNumber(scoreB)
+    }
+})
+input.onButtonPressed(Button.B, function () {
+    if (pushed == 0) {
+        pushed = 1
+        basic.showString("B")
+        scoreB += 1
+        basic.showString("A:")
+        basic.showNumber(scoreA)
+        basic.showString("B:")
+        basic.showNumber(scoreB)
+    }
+})
+input.onGesture(Gesture.Shake, function () {
+    basic.showString("wait")
+    basic.pause(Math.randomRange(1000, 5000))
+    pushed = 0
+    basic.showIcon(IconNames.Yes)
+})
+let pushed = 0
+let scoreB = 0
+let scoreA = 0
+scoreA = 0
+scoreB = 0
+pushed = 1
+```
