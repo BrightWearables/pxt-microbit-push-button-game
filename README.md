@@ -1,11 +1,5 @@
 # Push button game
 
-```template
-input.onGesture(Gesture.Shake, function () {
-    basic.showString("wait")
-})
-```
-
 ## Introduction @unplugged
 
 Let's make a push button game
@@ -18,7 +12,7 @@ In the ``||variables:Variables||`` menu click "Make a Variable".
 When asked, name it ``||variables:pushed||`` 
 Drag the new ``||variables:set pushed to 0||`` block into ``||basic:on start||``, then change the value of ``||variables:pushed||`` to 1.
 
-![create a variable](https://raw.githubusercontent.com/BrightWearables/pxt-microbit-push-button-game/master/docs/static/makeVariableMakeCodeSmaller.gif)
+ 
 
 You should end up with this code:
 ```blocks
@@ -66,8 +60,8 @@ let pushed = 0
 pushed = 1
 ```
 ## Step 5: Check putton pushes
-Move an ``||input:on button pressed||`` code block into the editor window.
-From the ``||logic:Logic||`` menu, take the first ``||logic:if||`` block and 
+Move an ``||input:on button A pressed||`` code block into the editor window.
+From the ``||logic:Logic||`` menu, take the top ``||logic:if||`` block and 
 place it inside the ``||input:on button pressed||`` block.
 
 ```blocks
@@ -94,15 +88,18 @@ pushed = 1
 
 ## Step 6: Check if player A pushed first
 
-We'll use the ``||logic:if||`` block to check if we're the first person to push the button. 
-Get the first comparison block from the ``||logic:Logic||`` menu, and add it inside the ``||logic:if||`` block.
-Check if the value of ``||variables:pushed||`` is zero by taking it from the ``||variables:Variables||`` menu, 
+In the ``||logic:if||`` block we'll check if we're first.
+Get the first comparison block from the ``||logic:Logic||`` menu, and place it inside the ``||logic:if||`` block. 
+Then check if the value of ``||variables:pushed||`` is zero by taking it from the ``||variables:Variables||`` menu, 
 and place it inside the comparison block.
 
+![create a variable](https://raw.githubusercontent.com/BrightWearables/pxt-microbit-push-button-game/master/docs/static/compareVariable.gif)
+
+## Step 7: Block the other player
 
 If the value of ``||variables:pushed||``
-is 0, and we'll block the other player out by setting ``||variables:pushed||`` to 1. 
-We'll also write the letter "A" to the screen to show who won (check hint if you're not sure how)
+is 0, we'll block the other player out by setting ``||variables:pushed||`` to 1. 
+We'll also write the letter "A" to the screen to show who won (check the hint if you're not sure how)
   
 ```blocks
 input.onButtonPressed(Button.A, function () {
@@ -129,10 +126,9 @@ pushed = 1
 ```
 ## Step 7: Check if player B won
 
-Add the exact same On button pressed code block for button B. The only difference is we'll change the value
+Copy the same code that checks if player A won in ``||input:on button A pressed||`` into a new block
+that responds to button B being pressed. Don't forget to change the display to show the letter "B"
 
-
-## Discard This Later
 ```blocks
 input.onButtonPressed(Button.A, function () {
     if (pushed == 0) {
@@ -161,3 +157,7 @@ input.onGesture(Gesture.Shake, function () {
 let pushed = 0
 pushed = 1
 ```
+## Step 8: Download and test your code
+
+Pair your micro:bit and download your code. Play the game against a friend and 
+test your reaction time!
