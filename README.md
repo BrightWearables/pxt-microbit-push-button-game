@@ -10,7 +10,8 @@ Let's make a push button game
 
 In the ``||variables:Variables||`` menu click "Make a Variable".
 When asked, name it ``||variables:pushed||`` 
-Drag the new ``||variables:set pushed to 0||`` block into ``||basic:on start||``, then change the value of ``||variables:pushed||`` to 1.
+Drag the new ``||variables:set pushed to 0||`` block into ``||basic:on start||``, 
+then change the value of ``||variables:pushed||`` to 1.
 
 ![create a variable](https://raw.githubusercontent.com/BrightWearables/pxt-microbit-push-button-game/master/docs/static/makeVariableMakeCode.gif)
 
