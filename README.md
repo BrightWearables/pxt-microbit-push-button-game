@@ -14,6 +14,8 @@ Drag the new ``||variables:set pushed to 0||`` block into ``||basic:on start||``
 
 ![create a variable](https://raw.githubusercontent.com/BrightWearables/pxt-microbit-push-button-game/master/docs/static/makeVariableMakeCode.gif)
 
+After you make the new variable ``||variables:pushed||``, set its value to 1:
+
 ```blocks
 let pushed = 0
 pushed = 1
@@ -71,7 +73,7 @@ place it inside the ``||input:on button pressed||`` block.
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
-    if (0==0) {
+    if (true) {
     }
 })
 
