@@ -149,4 +149,4 @@ pushed = 1
 ## Step 8: Download and test your code
 
 Pair your micro:bit and download your code. Play the game against a friend and 
-test your reaction time!
+test your reaction time. When you're sure it's working, do the next tutorial.
